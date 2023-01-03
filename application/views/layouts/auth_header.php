@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Aplikasi Pemesanan Menu, Aplikasi Soto Mie Bogor Boga Rasa, Aplikasi Berbasis Website">
+    <meta name="author" content="Faruq, Muhammad Faruq, Faruq Bekasi, Muhammad Faruq Noor Afiyf, STMIK Jayakarta">
 
     <title><?= "Aplikasi Memesan Makanan | " . $title; ?></title>
 
