@@ -29,7 +29,7 @@ Class model_users extends CI_Model
 	public function register()
 	{
 		$data = [
-			'id_role' => 1,
+			'id_role' => 3,
 			'name' => htmlspecialchars($this->input->post('name', true)),
 			'email' => htmlspecialchars($this->input->post('email', true)),
 			'phone' => htmlspecialchars($this->input->post('phone', true)),
@@ -79,8 +79,15 @@ Class model_users extends CI_Model
 	{
 		$current_password = $this->input->post('current_password');
 		$new_password = $this->input->post('new_password1');
+	}
 
-		
+	public function login_guest()
+	{
+		$data = [
+			'email' => "guest@mail.com",
+			'password' => "password",
+		];
+		return $this->db->get_where('users', $data);
 	}
 
 }

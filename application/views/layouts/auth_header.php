@@ -9,7 +9,7 @@
     <meta name="description" content="Aplikasi Pemesanan Menu, Aplikasi Soto Mie Bogor Boga Rasa, Aplikasi Berbasis Website">
     <meta name="author" content="Faruq, Muhammad Faruq, Faruq Bekasi, Muhammad Faruq Noor Afiyf, STMIK Jayakarta">
 
-    <title><?= "Aplikasi Memesan Makanan | " . $title; ?></title>
+    <title><?= "Soto Mie Bogor Boga Rasa | " . $title; ?></title>
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url('assets/'); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">

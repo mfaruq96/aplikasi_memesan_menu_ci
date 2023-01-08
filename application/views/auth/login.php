@@ -41,7 +41,7 @@
 									<div class="row">
 										<div class="col-lg-6">
 											<div class="text-center">
-												<a class="small" href="<?= base_url('auth/forgot_password'); ?>">Forgot Password?</a>
+												<a class="small" href="<?= base_url('auth/login_guest'); ?>">Login as guest</a>
 											</div>
 										</div>
 										<div class="col-lg-6">

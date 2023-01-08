@@ -171,8 +171,8 @@ class Orders extends CI_Controller
 
 	public function order_pending_details($id_order)
 	{
-		$data['title'] = "Order Pending";
-		$data['active'] = "Order Pending";
+		$data['title'] = "Manual Orders";
+		$data['active'] = "Manual Orders";
 		$data['user'] = $this->model_users->get_by_email_session();
 		$data['orders'] = $this->model_orders->get_where_status_zero();
 		$data['order_details'] = $this->model_order_details->get_where_id_order_join_products_user($id_order);

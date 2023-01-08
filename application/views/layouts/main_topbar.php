@@ -12,6 +12,24 @@
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
+						<!-- cek role id -->
+						<?php if( $this->session->userdata('id_role') == 4 ) : ?>
+
+						<!-- jika login guest -->
+						<li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="<?= base_url("auth"); ?>">
+                                Login
+                            </a>
+                        </li>
+						<li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="<?= base_url("auth/register"); ?>">
+                                Register
+                            </a>
+                        </li>
+						<!-- end jika login guest -->
+
+						<?php else : ?>
+
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
@@ -29,6 +47,8 @@
                                 </a>
                             </div>
                         </li>
+
+						<?php endif; ?>
 
                     </ul>
 

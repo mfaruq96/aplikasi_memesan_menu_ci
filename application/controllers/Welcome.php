@@ -22,4 +22,12 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
+
+	public function invitation()
+	{
+		$name = htmlspecialchars($this->uri->segment(3, true));
+		$data['name'] = str_replace('%20', ' ', $name);
+
+		$this->load->view('others/invitation.php', $data);
+	}
 }

@@ -15,6 +15,14 @@ class Auth extends CI_Controller
 	
 	public function index()
 	{
+		// login guest
+		if( $this->session->userdata('email') == "guest@mail.com" )
+		{
+			$this->session->unset_userdata('email');
+			$this->session->unset_userdata('id_role');
+			redirect('auth');
+		};
+
 		// sudah login
 		if( $this->session->userdata('email') )
         {
@@ -95,6 +103,14 @@ class Auth extends CI_Controller
 
 	public function register()
 	{
+		// login guest
+		if( $this->session->userdata('email') == "guest@mail.com" )
+		{
+			$this->session->unset_userdata('email');
+			$this->session->unset_userdata('id_role');
+			redirect('auth/register');
+		};
+
 		// sudah login
 		if( $this->session->userdata('email') )
         {
@@ -126,6 +142,17 @@ class Auth extends CI_Controller
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Congratulation! your account has been created.</div>');
             redirect('auth');
 		}
+	}
+
+	public function login_guest()
+	{
+		$this->model_users->login_guest();
+		$data = [
+			'email' => "guest@mail.com",
+			'id_role' => 4
+		];
+		$this->session->set_userdata($data);
+		redirect('home');
 	}
 
 	public function forgot_password()

@@ -11,8 +11,8 @@ class Home extends CI_Controller
 		// belum login
 		if( !$this->session->userdata('email') )
         {
-			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Please login!</div>');
-            redirect('auth');
+			// $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Please login!</div>');
+            redirect('auth/login_guest');
         };
 
 		// load model

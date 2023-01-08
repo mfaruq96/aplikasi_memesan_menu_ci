@@ -15,6 +15,14 @@ class Activity extends CI_Controller
             redirect('auth');
         };
 
+		// login guest
+		if( $this->session->userdata('id_role') == 4 )
+        {
+			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Please login for continue order!</div>');
+            redirect('home');
+        };
+		// end login guest
+
 		// load model
 		$this->load->model('model_users');
 		$this->load->model('model_products');
